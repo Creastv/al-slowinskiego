@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:$main;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 700;
+}
+p{
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.main-color{
+    color:$main;
+}
+
+
+.error{
+    font-size: 11px;
+    position: absolute;
+    bottom: 3px;
+    z-index: 2;
+    color: red;
+}
+
+#map
+{
+    width: 100%;
+    height: 100%;
+}
+
+.cta{
+    background-color: $main;
+    padding:5px 10px;
+    color:#fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#thx{
+    .thx{
+        position: absolute;
+        z-index: 2;
+        background: #f24800;
+        width: 50%;
+        top: 30%;
+        padding: 20px;
+        color: #fff;
+        @media #{$xxs} {
+            width: 70%;
+        }
+        h1{
+            @media #{$xxs} {
+                font-size: 21px;
+            }
+        }
+    }
+    .see{
+        @media #{$xxs} {
+            display: none;
+        }
+    }
+    
+}
