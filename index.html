@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Pomarańczarnia | Wawrzyszewska 11 / Obozowa </title>
     <meta name="description" content="Przeszklone partery dla biznesu Od 8699 pln net/m2">
@@ -31,10 +31,9 @@
                 <div class="swiper-container swiper-wraper">
                     <div class="swiper-wrapper swiper-slide-wraper">
                       <div class="swiper-slide">
-                        <h1>PRZESZKLONE PARTERY DLA BIZNESU<br>
-                            <span>OD 8600</span> pln net/m<sup>2</sup>
+                        <h1>LOKALE BIZNESOWE<br>
+                            METRAŻE OD 38m2
                         </h1>
-                        <h2>ODLICZ VAT!</h2>
                         <h3 class="main-color"><b> MASZ PYTANIE ?</b></h3>
                         <form name="contactForm" action="target.php" method="post" onsubmit="return validateForm()">
                             <div class="input-group">
@@ -52,18 +51,29 @@
                                 <input id="phone" type="text" name="fPhone" placeholder="Numer telefonu">
                                 <div class="error" id="phoneErr"></div>
                             </div>
+                            <div class="input-group">
+                                <span class="ic lokal"></span>
+                                <select id="lokale" name="locallist">
+                                    <option value="">Wybierz lokal</option>
+                                    <option value="U01 96,97 m2">U01 96,97 m2</option>
+                                    <option value="U02 42,15 m2">U02 42,15 m2</option>
+                                    <option value="U03 62,35 m2">U03 62,35 m2</option>
+                                    <option value="U04 84,69 m2">U04 84,69 m2</option>
+                                    <option value="U05 34,75 m2">U05 34,75 m2</option>
+                                  </select>
+                            </div>
 
                             <!-- Multiple Checkboxes (inline) -->
-                            <div class="check check-one input-group">
+                            <!-- <div class="check check-one input-group">
                                 <input name="oferta[]" type="checkbox" id="147m" class="lokal" value="Lokal 147m"/><label for="147m">lokal 147 m<sup>2</sup></label>
                                 <input  name="oferta[]" type="checkbox" id="183m" class="lokal" value="Lokal 183m"/><label for="183m">lokal 183 m<sup>2</sup></label>
                                 <div class="error" id="ofertaErr"></div>
-                            </div>
+                            </div> -->
                             <div class="check input-group">
                                 <label for="zgodaDane">
                                     <input name="zgodaDane" id="zgodaDane" type="checkbox" class="zgoda" value="Zaakceptowana zgoda o przetwarzanie Danych osobowych" />
                                     <span id="zgodaWiecej">
-                                        Wyrażam zgodę na przesyłanie przez Gemma Inwestycje z siedzibą w Warszawie (KRS: 0000342035) na podany adres e-mail informacji handlowych oraz na przetwarzanie moich danych osobowych w celu przedstawiania ofert nabycia nieruchomości – szczegóły w  <a target="_blank" href="https://www.gemma.waw.pl/files/upload/PolitykaPrywatnosci.pdf">Polityce Prywatności Gemma Inwestycje</a>
+                                        Wyrażam zgodę na przetwarzanie moich danych osobowyc  <a target="_blank" href="https://www.gemma.waw.pl/files/upload/PolitykaPrywatnosci.pdf">(więcej)</a>
                                     </span>
                                   <div class="error" id="zgodaDaneErr"></div>
                                 </label>
@@ -73,7 +83,7 @@
                                 <label for="zgodaTel"> 
                                     <input name="zgodaTel" id="zgodaTel" type="checkbox" class="zgoda"  value="Potwierdzona zgoda o otrzymywanie informacji marketingowych drogą telefoniczną" />
                                     <span id="zgodaWiecej2"> 
-                                        Wyrażam zgodę na kontakt przez Gemma Inwestycje z siedzibą w Warszawie (KRS: 0000342035) na podany numer telefonu (wiadomości SMS i połączenia głosowe) oraz na przetwarzanie moich danych osobowych w celu przedstawiania ofert nabycia nieruchomości – szczegóły w <a target="_blank" href="https://www.gemma.waw.pl/files/upload/PolitykaPrywatnosci.pdf">Polityce Prywatności Gemma Inwestycje</a>
+                                        Wyrażam zgodę na otrzymywanie drogą telefoniczną informacje handlowe w tym marketingowe <a target="_blank" href="https://www.gemma.waw.pl/files/upload/PolitykaPrywatnosci.pdf">(więcej)</a>
                                     </span>
                                     <div class="error" id="zgodaTelErr"></div>
                                 </label>
@@ -85,10 +95,16 @@
                                 <button type="submit" id="submit" class="btn-send">WYŚLIJ <span class="ic arrow"></span></button>
                             </div>
                         </form>
-                        <h3>Oferta lokali usługowych</h3>
-                        <p>Softloftowe wnętrze wysokie na 4 m, całościenne witryny okienne i jego industrialny charakter będą idealnym miejscem na stylowe pracownie, gabinety, showroomy oraz nowoczesne kawiarnie czy restauracje</p>
-                        <h3>Inwestycja Pomarańczarnia</h3>
-                        <p>Kameralny, <b>30-lokalowy apartamentowiec</b> o nowoczesnej bryle oraz elegancji w formie   i wykończeniu. <b>Oddany do użytkowania w 2018 r</b></p>
+                        <ul>
+                            <li> <img src="img/ico-lokalizacja.png" alt="Prestiżowa lokalizacja"> <span> Prestiżowa lokalizacja</span></li>
+                            <li> <img src="img/ico-standard.png" alt="Wysoki standard"> <span>Wysoki standard</span></li>
+                            <li> <img src="img/ico-metro.png" alt="Metro Słodowiec"> <span>Metro Słodowiec</span></li>
+                            <li> <img src="img/ico-park.png" alt="Park Stawy Kellera"> <span>Park Stawy Kellera</span></li>
+                        </ul>
+                        <div class="links-btn">
+                            <a href="tel:501816586" class="link-btn" > <img src="img/ico-tel.png" alt=""> 501 816 586</a>
+                            <a href="https://www.gemma.waw.pl" class="link-btn" target="_blank">www.gemma.waw.pl</a>
+                        </div>
                     </div>
                 </div>
                 <!-- Add Scroll Bar -->
@@ -96,18 +112,19 @@
               </div> 
             </div>
             <div class="container col-lg-9 col-md-8 col-sm-8 col-xs-12 first-xs last-sm">
-                <div class="top-left-corner">
-                    <img src="img/logo.jpg" alt="">
-                    <a href="#mapa" id="popup" class="jsModalTrigger">ZOBACZ <br>NA MAPIE</a>
-                </div>
                 <div class="top-right-corner">
-                    <a class="facebook" href="https://wp.pl" target="_blank"><img src="img/facebook.png" alt=""></a>
-                    <a class="tel" href="tel:">
-                        <span> Masz pytania ?</span><br> +48 501 816 586
-                    </a>
-                    <a href="#video" id="popup" class="jsModalTrigger"><img class="see" src="img/video-btn.png" alt=""></a>
+                    <img class="logo" src="img/logo.jpg" alt="">
+                    <div class="grad">
+                        <div class="links-nav">
+                        <a href="https://www.facebook.com/gemmainwestycje/"  target="_blank"> <img src="img/ico-facebook.png" alt="Facebook"> <br>ZOBACZ <br> NA FB</a>
+                        <a href="#video" class="jsModalTrigger"><img src="img/ico-play.png" alt="Zobacz film"> <br>ZOBACZ <br>FILM</a>
+                        <a href="#mapa"  class="jsModalTrigger"><img src="/img/ico-loc.png" alt="Zobacz na mapie"> <br>ZOBACZ <br>NA MAPIE</a>
+                        <a href="img/plany.pdf" target="_blank"  ><img src="img/ico-pdf.png" alt="Pobierz plany"> <br>POBIERZ <br>PLANY</a>
+                        </div>
+                    </div>
                 </div>
-                
+                <img class="badge" src="img/badge.png" alt="Zobacz film">
+                <img class="large-logo" src="img/logo-lg.png" alt="Zobacz film">
                  <!-- Swiper -->
                 <div class="carousel">
                     <div class="swiper-container gallery-top">
@@ -127,34 +144,8 @@
                 </div>           
             </div>
         </div>
+        
     </main>
-        <div class="wraper2">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12"></div>
-                <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 first-xs last-sm">
-                    <div class="bottom-left-corner">
-                        <div class="boxes">
-                            <div class="box">
-                                <img src="img/icon.png" alt="">
-                                <p>Lofty wysokie<br> na 4 metry!</p>
-                            </div>
-                            <div class="box">
-                                <img src="img/icon2.png" alt="">
-                                <p>Warszawa Wola 
-                                   <br> ul. Wawrzyszewska 11 <br>/Obozowa</p>
-                            </div>
-                            <div class="box">
-                                <img src="img/icon3.png" alt="">
-                                <p>Trzy duże inwestycje <br>
-                                    w okolicy z ponad <br>
-                                    1000 mieszkańcami</p>
-                            </div>
-                        </div>
-                        <a href="img/U01.pdf" target="_blank">Pobierz plan lokali usługowych </a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     <!-- google map    -->
     <div id="mapa" class="modal">
@@ -169,7 +160,7 @@
         <div class="modal__overlay jsOverlay"></div>
         <div class="modal__container">
             <!-- <iframe id="video" width="100%" height="100%" src="//www.youtube.com/embed/9vvTeEpHui8?rel=0" frameborder="0" allowfullscreen></iframe> -->
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Ig1LdpJ8ng0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5aya3hQevzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <button class="modal__close jsModalClose">&#10005;</button>
         </div>
     </div>
