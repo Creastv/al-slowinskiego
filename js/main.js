@@ -140,27 +140,13 @@ function validateForm() {
   var name = document.contactForm.fName;
   var email = document.contactForm.fEmail;
   var phone = document.contactForm.fPhone;
+  var local = document.contactForm.locallist;
   var zgoda = document.contactForm.zgodaDane;
   var zgoda2 = document.contactForm.zgodaTel;
 
-    var oferta = [];
-    var checkboxes = document.getElementsByName("oferta[]");
-    var nameErr = emailErr = phoneErr = zgodaDaneErr = zgodaTelErr = ofertaErr = true;
-    for(var i=0; i < checkboxes.length; i++) {
-        if(!checkboxes[i].checked ) {
-            // Populate oferta array with selected values
-           if (!checkboxes[0].checked ) {
-            printError("ofertaErr", "Zaznacz chociaż jedną opcję");
-           } 
-        } else {
-          oferta.push(checkboxes[i].value);
-          printError("ofertaErr", "");
-          ofertaErr = false;
-          console.log(oferta)
-        }
-    }
-  
-
+   
+    var nameErr = emailErr = phoneErr = localErr = zgodaDaneErr = zgodaTelErr =  true;
+    
 // Defining error variables with a default value
   // Validate imie i nazwisko
   if(name.value == "") {
@@ -172,6 +158,7 @@ function validateForm() {
           printError("nameErr", "Wprowadź poprawne imienie i nazwisko.");
       } else {
           printError("nameErr", "");
+          local.style.border = "1px solid green";
           nameErr = false;
       }
   }
@@ -186,6 +173,7 @@ function validateForm() {
           printError("emailErr", "Wprowdź poprawny adres email");
       } else{
           printError("emailErr", "");
+          local.style.border = "1px solid green";
           emailErr = false;
       }
   }
@@ -199,9 +187,24 @@ function validateForm() {
           printError("phoneErr", "Wprowadź poprawny nr telefonu.");
       } else{
           printError("phoneErr", "");
+          local.style.border = "1px solid green";
           phoneErr = false;
       }
   }
+
+  // Validate imie i nazwisko
+  if(local.value == "") {
+    printError("localErr", "Wprowadź swóje imię i nazwisko.");
+    local.style.border = "1px solid red";
+    localErr = true;
+} else {
+  
+        printError("localErr", "");
+        local.style.border = "1px solid green";
+        localErr = false;
+
+}
+
   // Validate zgoda o przetwarzanie danych osobowych
   if(!zgoda.checked) {
     printError("zgodaDaneErr", "Pole wymagane.");
@@ -220,18 +223,8 @@ function validateForm() {
     zgodaTelErr = false;
   }
   // Prevent the form from being submitted if there are any errors
-  if(( nameErr || emailErr || phoneErr || zgodaDaneErr || zgodaTelErr || ofertaErr ) == true) {
+  if(( nameErr || emailErr || phoneErr || localErr || zgodaDaneErr || zgodaTelErr ) == true) {
      return false;
-  } else {
-    var dataPreview = "Dane: \n" +
-    "Imię i nazwisko: " + name.value + "\n" +
-    "Email: " + email.value + "\n" +
-    "Telefon: " + phone.value + "\n" +
-    "Zgoda: " + zgoda.value + "\n" +
-    "Zgoda2: " + zgoda2.value + "\n";
-    if(oferta.length) {
-    dataPreview += "Oferta: " + oferta.join(", ");
-    } alert(dataPreview);
   }
 };
 

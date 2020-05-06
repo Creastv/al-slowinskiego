@@ -7,8 +7,8 @@ $date = date('d/m/Y');
 $name = $_POST['fName']; 
 $email = $_POST['fEmail']; 
 $phone = $_POST['fPhone']; 
-$oferta = $_POST['oferta[]'];
-$zgodaDan = $_POST['zgodaDane'];
+$local = $_POST['locallist'];
+$zgodaDane = $_POST['zgodaDane'];
 $zgodaTel = $_POST['zgodaTel'];
 
 
@@ -21,7 +21,7 @@ $zgodaTel = $_POST['zgodaTel'];
                   <body>
                   <head>
                   </head>
-                  <table align='center' style=' background:#f24800; width: 600px;'>
+                  <table style=' width: 600px;'>
                     <thead>
                       <tr>
                         <td colspan='2' style='border-bottom:1px solid;'>
@@ -44,7 +44,7 @@ $zgodaTel = $_POST['zgodaTel'];
                     </tr>
                     <tr>
                     <td style='border-bottom:1px solid ;' >Oferta:</td>
-                    <td style='border-bottom:1px solid ;'>{$oferta}</td>     
+                    <td style='border-bottom:1px solid ;'>{$local}</td>
                   </tr>
                     <tr>
                       <td style='border-bottom:1px solid ;' >Zgoda:</td>
@@ -64,16 +64,9 @@ $zgodaTel = $_POST['zgodaTel'];
                   ";
 
 // Send
-mail("biuro@odszkodowanie-powypadkowe.com.pl","Leed złorzony dnia:{$date}",$emailbody,$headers);
+mail("creastv@gmail.com","Leed złorzony dnia:{$date}",$emailbody,$headers);
 // Send
-
-if (isset($_POST['signup']))
-    {   
-    ?>
+?>
 <script type="text/javascript">
 window.location = "thx.html";
-</script>      
-    <?php
-    }
-
-?>
+</script>  
